@@ -16,12 +16,19 @@
     /* style header */
     /* ================================================= */
     
+    .wrapper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
     .header {
-        background-color: rgba(44, 41, 41, 0.74);
         z-index: 999;
         padding: 5rem 0 2rem 0;
         width: 100%;
-        position: fixed;
+        top: 0;
+        position: absolute;
+        overflow-x: hidden;
+        height: 100vh;
         color: white;
     }
     
@@ -645,10 +652,16 @@
     }
     
     @media (max-width:991px) {
+        body {
+            overflow-x: hidden;
+        }
         html {
             font-size: 59%;
         }
         .container-fluid {
+            overflow-x: hidden;
+        }
+        .container {
             overflow-x: hidden;
         }
         .header {
@@ -765,11 +778,20 @@
         .facts .container-fluid {
             padding: 0 2rem;
         }
+        .portfolio__card .card__img .overlay .overlay__info .overlay__button a {
+            white-space: nowrap;
+        }
     }
     
     @media (max-width:767px) {
         .header__button {
             display: none;
+        }
+        .portfolio__card .card__img .overlay .overlay__info {
+            padding-left: 1rem;
+        }
+        .portfolio__card .card__img .overlay .overlay__info h2 {
+            font-size: 1.4rem;
         }
     }
     
